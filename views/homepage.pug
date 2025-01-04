@@ -3,6 +3,20 @@ html
     head 
         title= ` Update Custom Object Form | Integrating With HubSpot I Practicum.`
         meta(name="viewport" content="width=device-width, initial-scale=1")
-        link(rel="stylesheet", href="/public/style.css")
+        link(rel="stylesheet", href="/css/style.css")
     body  
-    
+    h1 Contact Object Table 
+
+
+  table(border="1" cellpadding="10" cellspacing="0")
+    thead
+      tr
+        th First Name
+        th Last Name
+        th Email Address
+    tbody
+      each row in rows
+        tr
+          td= row.col1
+          td= row.col2
+          td= row.col3
