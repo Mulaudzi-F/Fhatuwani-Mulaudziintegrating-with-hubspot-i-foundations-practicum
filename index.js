@@ -46,11 +46,13 @@ app.get("/update-cobj", async (req, res) => {
 app.post("/update-cobj", async (req, res) => {
   const update = {
     properties: {
-      favorite_book: req.body.newVal,
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
+      email: req.body.email,
     },
   };
-  const email = req.query.email;
-  const updateContact = `https://api.hubapi.com/crm/v3/objects/contacts/${email}?idProperty=email`;
+
+  const updateContact = `https://api.hubapi.com/crm/v3/objects/contacts`;
   const headers = {
     Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
     "Content-Type": "application/json",
