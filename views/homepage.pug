@@ -7,16 +7,16 @@ html
     body  
     h1 Contact Object Table 
 
-
-  table(border="1" cellpadding="10" cellspacing="0")
-    thead
-      tr
-        th First Name
-        th Last Name
-        th Email Address
-    tbody
-      each row in rows
-        tr
-          td= row.col1
-          td= row.col2
-          td= row.col3
+    a(href="/update-cobj") Add New Record
+    table(border="1" cellpadding="10" cellspacing="0")
+        thead
+            tr
+                th First Name
+                th Last Name
+                th Email Address
+        tbody
+            each result in data
+                tr
+                    td= result.firstname
+                    td= result.lastname
+                    td= result.email 
