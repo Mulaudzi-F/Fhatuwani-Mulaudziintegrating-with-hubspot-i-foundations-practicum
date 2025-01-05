@@ -7,7 +7,7 @@ html
     body  
     h1 Contact Object Table 
 
-    a(href="/update-cobj") Add New Record
+    a(href="/update-cobj") Add New Contact Record
     table(border="1" cellpadding="10" cellspacing="0")
         thead
             tr
@@ -17,6 +17,6 @@ html
         tbody
             each result in data
                 tr
-                    td= result.firstname
-                    td= result.lastname
-                    td= result.email 
+                    td= result.properties.firstname
+                    td= result.properties.lastname
+                    td= result.properties.email 
